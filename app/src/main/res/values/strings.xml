@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Best Movies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie_list_frigment_title">Главная</string>
+    <string name="genres_title">Жанры</string>
+    <string name="movies_title">Фильмы</string>
+</resources>

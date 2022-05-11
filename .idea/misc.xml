@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/drawable/radio_normal.xml" value="0.152" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/drawable/radio_selected.xml" value="0.1" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/drawable/radio_selector.xml" value="0.1" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/drawable/text_color.xml" value="0.1" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/activity_main.xml" value="0.1778115501519757" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/fragment_movie_details.xml" value="0.33" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/fragment_movie_list.xml" value="0.22" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/genre_item.xml" value="0.27717391304347827" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/item_category.xml" value="0.1773049645390071" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/item_film.xml" value="0.1" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/item_genre.xml" value="0.1" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/layout/item_title.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/Demet/AndroidStudioProjects/BestMovies/app/src/main/res/menu/movie_details_fragment_toolbar.xml" value="0.24166666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
