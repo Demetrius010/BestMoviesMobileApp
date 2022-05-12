@@ -5,4 +5,7 @@
     <string name="movie_list_frigment_title">Главная</string>
     <string name="genres_title">Жанры</string>
     <string name="movies_title">Фильмы</string>
+    <string name="year">Год: %1s</string>
+    <string name="rating">Рейтинг: %1s</string>
+    <string name="filmImage">Афиша фильма</string>
 </resources>

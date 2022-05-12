@@ -1,17 +1,15 @@
 package com.bignerdranch.android.bestmovies.views
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.bignerdranch.android.bestmovies.MainActivity
 import com.bignerdranch.android.bestmovies.R
 import com.bignerdranch.android.bestmovies.databinding.FragmentMovieDetailsBinding
-import com.bignerdranch.android.bestmovies.databinding.FragmentMovieListBinding
 import com.bumptech.glide.Glide
 
+// Данный фрагмент не имеет Presenter, поскольку здесь просто отображаются данные модели, с которыми пользователь никак не взаимодействует
 class MovieDetailsFragment : Fragment() {
     private var _binding: FragmentMovieDetailsBinding? = null
     private val binding// This property is only valid between onCreateView and onDestroyView.
@@ -23,13 +21,13 @@ class MovieDetailsFragment : Fragment() {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
         actionBar = (activity as AppCompatActivity).supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayHomeAsUpEnabled(true) // отображаем кнопку назад в ActionBar
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             android.R.id.home ->{
-                findNavController().navigateUp()
+                findNavController().navigateUp()//нажав кнопку назад в ActionBar возращаемся к списку фильмов
             }
             else -> super.onOptionsItemSelected(item)
         }
@@ -43,26 +41,22 @@ class MovieDetailsFragment : Fragment() {
 
         arguments?.let {
             val args = MovieDetailsFragmentArgs.fromBundle(it)
-            val movieData = args.movieData
-            //Log.d("DETAILS", movieData.name + " " + movieData.year + " " + movieData.rating)
+            val movieData = args.movieData// получаем выбранный пользователем фильм из аргументов фрагмента
             binding.run {
                 filmName.text = movieData.name
-                filmDate.text = movieData.year.toString()
-                filmRating.text = movieData.rating.toString()
+                filmDate.text = getString(R.string.year, movieData.year.toString())
+                filmRating.text = getString(R.string.rating, movieData.rating.toString())
                 filmDesc.text = movieData.description
-                actionBar?.title = movieData.localized_name
-                Glide.with(requireContext())
+                actionBar?.title = movieData.localized_name // менем заголовок actionBar на название фильма
+                Glide.with(requireContext())// загружаем обложку фильма из кеша
                     .load(movieData.image_url)
-                    .placeholder(R.color.white)
+                    .placeholder(R.drawable.ic_image_not_supported)
+                    .error(R.drawable.ic_broken_image)
                     .onlyRetrieveFromCache(true)
                     .into(filmImage)
             }
         }
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onDestroyView() {
@@ -72,7 +66,7 @@ class MovieDetailsFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        actionBar?.setDisplayHomeAsUpEnabled(false)
+        actionBar?.setDisplayHomeAsUpEnabled(false)//скрываем кнопку назад в ActionBar
     }
 
 }

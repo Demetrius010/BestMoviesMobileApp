@@ -1,7 +1,7 @@
 package com.bignerdranch.android.bestmovies.models
 
-import android.util.Log
-
+// Данный класс является синглтоном и организует доступ к данным.
+// В данном приложении используется просто как посредник между DataFetcher и MovieListFragmentPresenter
 class Repository private constructor(){
     companion object{
         private var instance: Repository? = null
@@ -14,5 +14,4 @@ class Repository private constructor(){
     }
 
     fun fetchData() = DataFetcher().fetchFilms()
-
 }

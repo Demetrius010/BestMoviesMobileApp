@@ -24,24 +24,22 @@ class DataFetcher {
         filmsApi = retrofit.create(FilmsApi::class.java)
     }
 
-    fun fetchFilms(): LiveData<List<Film>> {
+    fun fetchFilms(): LiveData<List<Film>> {// возвращам LiveData за которым будет следить MovieListPresenter
         val responseLiveData: MutableLiveData<List<Film>> = MutableLiveData()
-        filmsApi.getFilms().enqueue(object: Callback<FilmsModel>{
+        filmsApi.getFilms().enqueue(object: Callback<FilmsModel>{ // запрос выполняем асинхронно
             override fun onResponse(call: Call<FilmsModel>, response: Response<FilmsModel>) {
-                if (response.isSuccessful){
+                if (response.isSuccessful){ // в случае успеха кладем данные в объект LiveData, о чем уведомятся все observer'ы
                     val filmsModel = response.body()
-                    responseLiveData.value = filmsModel?.films ?: mutableListOf()
-//                    filmsModel?.let {
-//                        for(film in it.films)
-//                            Log.d(TAG,"Response received: $filmsModel")
-//                    }
+                    responseLiveData.value = filmsModel?.films ?: listOf()
                 } else {
-                    Log.d(TAG,"ERROR! ${response.code()}")
+                    Log.e(TAG,"ERROR! Response code: ${response.code()}")
+                    responseLiveData.value = listOf()// в случае неудачи данных нет
                 }
             }
 
             override fun onFailure(call: Call<FilmsModel>, t: Throwable) {
-                Log.d(TAG,"ERROR! ${t.message}")
+                Log.e(TAG,"ERROR! Throwable message: ${t.message}")
+                responseLiveData.value = listOf()// в случае неудачи данных нет
             }
         })
         return responseLiveData

@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_margin="12dp">
 
     <ImageView
         android:id="@+id/filmImgView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="H,1:1"
+        android:contentDescription="@string/filmImage"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,8 +23,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/lightGray"
-        android:maxLines="2"
+        android:contentDescription="@string/filmImage"
+        android:ellipsize="end"
+        android:lines="2"
+        android:minLines="1"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/filmImgView"
         app:layout_constraintStart_toStartOf="@+id/filmImgView"
