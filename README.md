@@ -1,7 +1,7 @@
 # BestMoviesMobileApp
 Test task for the position of junior developer android
 
-В ветке simple_solution находится реализация, в которой только список фильов находится в RecyclerView.
+В ветке simple_solution находится реализация, в которой только список фильмов находится в RecyclerView.
 
 В ветке master реализация, в которой жанры и фильмы находятся в одином RecyclerView.
 
