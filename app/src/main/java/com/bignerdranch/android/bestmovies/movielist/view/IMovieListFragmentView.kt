@@ -1,6 +1,6 @@
-package com.bignerdranch.android.bestmovies.views
+package com.bignerdranch.android.bestmovies.movielist.view
 
-import com.bignerdranch.android.bestmovies.models.Film
+import com.bignerdranch.android.bestmovies.movielist.model.RecyclerDataModel
 import moxy.MvpView
 import moxy.viewstate.strategy.*
 
@@ -9,5 +9,5 @@ interface IMovieListFragmentView: MvpView {
     @StateStrategyType(value = OneExecutionStateStrategy::class)//выполняется ровно один раз, очередь команд остается неизменной
     fun startDataFetching() // запрос данных делаем только один раз в событии onFirstViewAttach в Presenter
     fun onFailure(message: String)//  при пересоздании view ошибка появится снова
-    fun onSuccess(films: List<Film>) // при пересоздании view занаво сформируется фильтр из жанров и RecyclerView с учетом изменившейся конфигурации
+    fun onSuccess(firsDataPart: List<RecyclerDataModel>, secondDataPart: List<RecyclerDataModel>) // при пересоздании view занаво сформируется RecyclerView с учетом изменившейся конфигурации
 }

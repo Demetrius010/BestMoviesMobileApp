@@ -1,4 +1,4 @@
-package com.bignerdranch.android.bestmovies.models
+package com.bignerdranch.android.bestmovies.utils
 
 // Данный класс является синглтоном и организует доступ к данным.
 // В данном приложении используется просто как посредник между DataFetcher и MovieListFragmentPresenter

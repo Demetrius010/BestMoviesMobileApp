@@ -1,4 +1,4 @@
-package com.bignerdranch.android.bestmovies.views
+package com.bignerdranch.android.bestmovies.moviedetails
 
 import android.os.Bundle
 import android.view.*

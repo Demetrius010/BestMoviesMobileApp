@@ -1,4 +1,4 @@
-package com.bignerdranch.android.bestmovies.models
+package com.bignerdranch.android.bestmovies.utils
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

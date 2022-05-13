@@ -1,9 +1,9 @@
-package com.bignerdranch.android.bestmovies.models
+package com.bignerdranch.android.bestmovies.utils
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.bignerdranch.android.bestmovies.models.api.FilmsApi
+import com.bignerdranch.android.bestmovies.utils.api.FilmsApi
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

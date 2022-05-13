@@ -1,6 +1,6 @@
-package com.bignerdranch.android.bestmovies.models.api
+package com.bignerdranch.android.bestmovies.utils.api
 
-import com.bignerdranch.android.bestmovies.models.FilmsModel
+import com.bignerdranch.android.bestmovies.utils.FilmsModel
 import retrofit2.Call
 import retrofit2.http.GET
 
